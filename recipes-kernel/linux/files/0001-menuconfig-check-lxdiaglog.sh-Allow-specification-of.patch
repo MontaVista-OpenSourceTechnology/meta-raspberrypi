@@ -1,4 +1,4 @@
-From e6ebc8e654bba53f28af5229a1069fc74fa58b7b Mon Sep 17 00:00:00 2001
+From c0293d0723851e8958ca7d626ca1b7a8ad2b63b0 Mon Sep 17 00:00:00 2001
 From: Jason Wessel <jason.wessel@windriver.com>
 Date: Thu, 25 Sep 2014 11:26:49 -0700
 Subject: [PATCH] menuconfig,check-lxdiaglog.sh: Allow specification of ncurses
@@ -32,10 +32,10 @@ Signed-off-by: California Sullivan <california.l.sullivan@intel.com>
 diff --git a/scripts/kconfig/lxdialog/check-lxdialog.sh b/scripts/kconfig/lxdialog/check-lxdialog.sh
 old mode 100755
 new mode 100644
-index 5075ebf2d3b9..ba9242101190
+index a10bd9d6fafd..1520dc04d399
 --- a/scripts/kconfig/lxdialog/check-lxdialog.sh
 +++ b/scripts/kconfig/lxdialog/check-lxdialog.sh
-@@ -4,6 +4,10 @@
+@@ -5,6 +5,10 @@
  # What library to link
  ldflags()
  {
@@ -46,7 +46,7 @@ index 5075ebf2d3b9..ba9242101190
  	pkg-config --libs ncursesw 2>/dev/null && exit
  	pkg-config --libs ncurses 2>/dev/null && exit
  	for ext in so a dll.a dylib ; do
-@@ -21,6 +25,10 @@ ldflags()
+@@ -22,6 +26,10 @@ ldflags()
  # Where is ncurses.h?
  ccflags()
  {
@@ -58,5 +58,5 @@ index 5075ebf2d3b9..ba9242101190
  		echo '-DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1'
  	elif pkg-config --cflags ncurses 2>/dev/null; then
 -- 
-2.14.3
+2.17.1
 
