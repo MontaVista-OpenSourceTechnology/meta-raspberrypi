@@ -8,3 +8,9 @@ SRC_URI = " \
     "
 
 require linux-raspberrypi.inc
+
+python __anonymous() {
+    if "raspberrypi4" in d.getVar("MACHINE"):
+        msg = "Skipping linux-raspberrypi_4.14 as it is incompatible with rpi4"
+        raise bb.parse.SkipRecipe(msg)
+}
