@@ -1,0 +1,34 @@
+From 9f1b0a3a19d1fd4cc48aa6b7ebe88933278cc69a Mon Sep 17 00:00:00 2001
+From: Paul Barker <paul@betafive.co.uk>
+Date: Thu, 25 Jul 2019 21:14:36 +0100
+Subject: [PATCH] Rename Pi Zero W device tree
+
+Upstream-status: Backport (6f91b5dbfdb62a434571a73f2dc15181963e3bea,
+    file rename only)
+Signed-off-by: Paul Barker <paul@betafive.co.uk>
+---
+ arch/arm/boot/dts/Makefile                                      | 2 +-
+ .../boot/dts/{bcm2708-rpi-0-w.dts => bcm2708-rpi-zero-w.dts}    | 0
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ rename arch/arm/boot/dts/{bcm2708-rpi-0-w.dts => bcm2708-rpi-zero-w.dts} (100%)
+
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index 37982e8e3a30..b693bd37c472 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -5,7 +5,7 @@ dtb-$(CONFIG_ARCH_BCM2835) += \
+ 	bcm2708-rpi-b.dtb \
+ 	bcm2708-rpi-b-plus.dtb \
+ 	bcm2708-rpi-cm.dtb \
+-	bcm2708-rpi-0-w.dtb \
++	bcm2708-rpi-zero-w.dtb \
+ 	bcm2709-rpi-2-b.dtb \
+ 	bcm2710-rpi-3-b.dtb \
+ 	bcm2710-rpi-3-b-plus.dtb \
+diff --git a/arch/arm/boot/dts/bcm2708-rpi-0-w.dts b/arch/arm/boot/dts/bcm2708-rpi-zero-w.dts
+similarity index 100%
+rename from arch/arm/boot/dts/bcm2708-rpi-0-w.dts
+rename to arch/arm/boot/dts/bcm2708-rpi-zero-w.dts
+-- 
+2.22.0
+
