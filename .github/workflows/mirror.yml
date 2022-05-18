@@ -14,9 +14,10 @@ jobs:
     name: Yocto Git Mirror
     runs-on: [self-hosted, Linux]
     steps:
-      - uses: agherzan/git-mirror-me-action@v1.0.0
+      - uses: agherzan/git-mirror-me-action@f4e76e169104c9f4f680c4f77647e6b01aff6267
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.YOCTO_META_RASPBERRYPI_SSH_PRIVATE_KEY }}
-          SSH_KNOWN_HOSTS: ${{ secrets.YOCTO_META_RASPBERRYPI_SSH_KNOWN_HOSTS }}
+          GMM_SSH_PRIVATE_KEY: ${{ secrets.YOCTO_META_RASPBERRYPI_SSH_PRIVATE_KEY }}
+          GMM_SSH_KNOWN_HOSTS: ${{ secrets.YOCTO_META_RASPBERRYPI_SSH_KNOWN_HOSTS }}
         with:
           destination-repository: "git@push.yoctoproject.org:meta-raspberrypi"
+          debug: "true"
