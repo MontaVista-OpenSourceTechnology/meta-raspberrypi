@@ -43,7 +43,7 @@ jobs:
           fetch-depth: 0
       - name: Define Yocto build files
         id: changed-files-specific
-        uses: tj-actions/changed-files@v24
+        uses: tj-actions/changed-files@v41
         with:
           files: |
             .github/actions/**
